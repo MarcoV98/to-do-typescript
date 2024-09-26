@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
-function App() {
+import Form from "./components/Form";
+import List from "./components/List";
+
+const App: React.FC = () => {
+  interface Task {
+    id: number;
+    text: string;
+  }
+
+  const [tasks, setTasks] = useState<Task[]>([]);
+
+  const addHandler = (enteredInput: string) => {
+    setTasks((prevTasks) => [...prevTasks, { id: Math.random(), text: enteredInput }]);
+  };
+
+  const deleteHandler = (id: number) => {
+    setTasks((prevTasks) => {
+      return prevTasks.filter(task => task.id !== id)
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form onAddHandler={addHandler} />
+      <List tasks={tasks} onDeleteHandler={deleteHandler} />
     </div>
   );
-}
+};
 
 export default App;
