@@ -1,17 +1,17 @@
 import React, { createContext, useState, ReactNode } from "react";
 
-interface TaskType {
+interface Task {
   id: number;
   text: string;
 }
 
 interface TaskContextType {
-  tasks: TaskType[];
+  tasks: Task[];
   addTask: (text: string) => void;
   deleteTask: (id: number) => void;
 }
 
-interface TaskProviderType {
+interface TaskProviderProps {
   children: ReactNode;
 }
 
@@ -21,13 +21,15 @@ export const TaskContext = createContext<TaskContextType>({
   deleteTask: () => {},
 });
 
-export const TaskProvider: React.FC<TaskProviderType> = ({ children }) => {
-  const [tasks, setTasks] = useState<TaskType[]>([]);
+let nextId = 1;
+
+export const TaskProvider: React.FC<TaskProviderProps> = ({ children }) => {
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   const addTask = (enteredInput: string) => {
     setTasks((prevTasks) => [
       ...prevTasks,
-      { id: Math.random(), text: enteredInput },
+      { id: nextId++, text: enteredInput },
     ]);
   };
 
