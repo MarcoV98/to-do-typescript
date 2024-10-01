@@ -1,21 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TaskContext } from "../store/TaskContext";
 
-interface tasksProps {
-  tasks: {
-    id: number;
-    text: string;
-  }[];
+const List: React.FC = () => {
+  const { tasks, deleteTask } = useContext(TaskContext);
 
-  onDeleteHandler: (id: number) => void;
-}
-
-const List: React.FC<tasksProps> = (props) => {
   return (
     <ul>
-      {props.tasks.map((task) => (
+      {tasks.map((task) => (
         <li key={task.id}>
-        <span>{task.text}</span>
-        <button onClick={props.onDeleteHandler.bind(null, task.id )}>DELETE</button>
+          <span>{task.text}</span>
+          <button onClick={() => deleteTask(task.id)}>DELETE</button>
         </li>
       ))}
     </ul>
