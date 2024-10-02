@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { TaskContext } from "../store/TaskContext";
+import { useSnapshot } from "valtio";
+import { TaskStore } from "../store/TaskStore";
 
 const List: React.FC = () => {
-  const { tasks, deleteTask } = useContext(TaskContext);
+  const { tasks, deleteTask } = useSnapshot(TaskStore);
 
   return (
     <ul>

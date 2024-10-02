@@ -1,9 +1,7 @@
 import React, { useRef, useContext } from "react";
-import { TaskContext } from "../store/TaskContext";
+import { TaskStore } from "../store/TaskStore";
 
 const Form: React.FC = () => {
-  const { addTask } = useContext(TaskContext);
-
   const inputText = useRef<HTMLInputElement>(null);
 
   const submitHandler = (e: React.FormEvent) => {
@@ -11,8 +9,8 @@ const Form: React.FC = () => {
     const enteredInput = inputText.current!.value;
 
     if (enteredInput.trim().length > 0) {
-      addTask(enteredInput);
-      inputText.current!.value = "";
+      TaskStore.addTask(enteredInput);
+      inputText.current!.value = ''
     }
   };
 
