@@ -5,18 +5,22 @@ interface Task {
 	text: string;
 }
 
-const store = proxy({
+interface ITaskStore {
+	tasks: Task[],
+	/* addTask: (text: string) => void 
+	deleteTask: (id: number) => void */
+}
+
+export const taskStore = proxy<ITaskStore>({
 	tasks: [] as Task[],
-	nextId: 1,
-	addTask: (text: string) => {
-		store.tasks.push({
-			id: store.nextId++,
+	/* addTask: (text: string) => {
+		taskStore.tasks.push({
+			id: taskStore.tasks.length + 1,
 			text,
 		});
 	},
 	deleteTask: (id: number) => {
-		store.tasks = store.tasks.filter((task) => task.id !== id);
-	},
+		taskStore.tasks = taskStore.tasks.filter((task) => task.id !== id);
+	}, */
 });
 
-export const TaskStore = store;

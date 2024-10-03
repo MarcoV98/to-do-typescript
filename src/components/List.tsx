@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useSnapshot } from "valtio";
-import { TaskStore } from "../store/TaskStore";
+import { taskStore } from "../store/TaskStore";
 
 const List: React.FC = () => {
-  const { tasks, deleteTask } = useSnapshot(TaskStore);
+  const { tasks } = useSnapshot(taskStore);
+
 
   return (
     <ul>
       {tasks.map((task) => (
         <li key={task.id}>
           <span>{task.text}</span>
-          <button onClick={() => deleteTask(task.id)}>DELETE</button>
         </li>
       ))}
     </ul>
