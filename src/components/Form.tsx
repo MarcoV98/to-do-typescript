@@ -1,18 +1,25 @@
-import React, { useRef, useContext } from "react";
-import { TaskContext } from "../store/TaskContext";
+import React, { useRef } from "react";
+import { taskStore } from "../store/TaskStore";
 
 const Form: React.FC = () => {
-  const { addTask } = useContext(TaskContext);
-
   const inputText = useRef<HTMLInputElement>(null);
+
+  const addTask = (text: string) => {
+    taskStore.tasks.push({
+      id: taskStore.tasks.length + 1,
+      text,
+    });
+  };
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    const enteredInput = inputText.current!.value;
+    if (!inputText.current) return;
+
+    const enteredInput = inputText.current.value;
 
     if (enteredInput.trim().length > 0) {
       addTask(enteredInput);
-      inputText.current!.value = "";
+      inputText.current.value = "";
     }
   };
 
@@ -31,3 +38,4 @@ const Form: React.FC = () => {
 };
 
 export default Form;
+
