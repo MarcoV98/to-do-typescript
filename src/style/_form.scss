@@ -1,0 +1,13 @@
+.input-group {
+	@include displayCenter();
+	width: 100%;
+	padding: 10px 20px;
+
+	&__input {
+		width: 80%;
+		padding: 0.5rem;
+		border: 2px solid $inputBorder;
+		border-radius: 10px 0 0 10px;
+		border-right: none;
+	}
+}

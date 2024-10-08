@@ -5,16 +5,13 @@ import Modal from './Modal';
 
 const List: React.FC = () => {
   const { tasks } = useSnapshot(taskStore);
-  const [isOpen, setIsOpen] = useState(false);
-  const [editId, setEditId] = useState<number | null>();
+  const [editId, setEditId] = useState<number | null>(null);
 
   const openModal = (id: number) => {
     setEditId(id);
-    setIsOpen(true);
   };
 
   const closeModal = () => {
-    setIsOpen(false);
     setEditId(null);
   };
 
@@ -23,21 +20,29 @@ const List: React.FC = () => {
   };
 
   return (
-    <div>
-      <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>
-            {task.text}
-            <button onClick={() => openModal(task.id)}>Edit</button>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+    <ul className="list">
+      {tasks.map((task) => (
+        <React.Fragment key={task.id}>
+          <li className="list__item">
+            <span>{task.text}</span>
+            <div>
+              <button className="button" onClick={() => openModal(task.id)}>
+                <span className="button__body">Edit</span>
+              </button>
+              <button className="deleteBtn" onClick={() => deleteTask(task.id)}>
+                <span className="button__body">Delete</span>
+              </button>
+            </div>
           </li>
-        ))}
-      </ul>
-      
-      {isOpen && editId && (
-        <Modal closeModal={closeModal} taskId={editId} />
-      )}
-    </div>
+		  
+          {editId === task.id && (
+            <div className="modal__container">
+              <Modal closeModal={closeModal} taskId={editId} />
+            </div>
+          )}
+        </React.Fragment>
+      ))}
+    </ul>
   );
 };
 

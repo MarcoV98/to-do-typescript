@@ -1,0 +1,15 @@
+.list {
+    width: 91%;
+    list-style: none;
+    @include displayCenter(column);
+  
+    &__item {
+      color: $listItemColor; 
+      background-color: $secondaryColor;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      width: 100%;
+      @include displayBtw();
+    }
+  }

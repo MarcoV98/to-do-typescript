@@ -1,0 +1,34 @@
+.button {
+  background-color: $btnBgColor;
+  color: $btnTextColor;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: $lightShadow;
+  margin-left: 0.3rem;
+
+  &:hover {
+    background-color: $secondaryColor;
+    box-shadow: $deepShadow;
+  }
+}
+
+.deleteBtn {
+  @extend .button;
+  background-color: $deleteBtnColor;
+
+  &:hover {
+    background-color: $deleteBtnHover;
+  }
+}
+
+.input-group__button {
+  @extend .button;
+  border-radius: 0 10px 10px 0;
+  padding: 0.5rem;
+  border: 2px solid $secondaryColor;
+  width: 5rem;
+  margin-left: 0;
+}
