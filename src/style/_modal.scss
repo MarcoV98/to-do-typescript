@@ -1,0 +1,29 @@
+
+.modal {
+  &__container {
+  @include displayCenter();
+  width: 100%;
+  }
+
+  background-color: $mainBgColor;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: $lightShadow;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  @include fadeIn();
+
+  &__title {
+    font-size: 1.5rem;
+  margin-bottom: 1rem;
+  }
+
+  &__input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid $inputBorder;
+  border-radius: 5px;
+  }
+}

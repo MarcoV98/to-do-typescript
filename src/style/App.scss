@@ -1,0 +1,30 @@
+@import 'colors';
+@import 'mixins';
+@import 'fonts';
+
+@import 'main';
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, #root, .App {
+  height: 100vh;
+}
+
+body {
+  background: $backgroundColor;
+  color: $primaryColor;
+
+  font-family: $mainFont, sans-serif;
+  font-size: $mainSize;
+  font-weight: $mainWeight;
+}
+
+.App {
+  @include displayCenter();
+}
+

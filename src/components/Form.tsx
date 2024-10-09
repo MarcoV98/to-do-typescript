@@ -24,15 +24,15 @@ const Form: React.FC = () => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <label htmlFor="taskInput"></label>
+    <form onSubmit={submitHandler} className="input-group">
       <input
+        className="input-group__input"
         type="text"
         id="taskInput"
         placeholder="Add your task..."
         ref={inputText}
       />
-      <button type="submit">Add task</button>
+      <button className="input-group__button" type="submit"><span className="button__body">Add</span></button>
     </form>
   );
 };

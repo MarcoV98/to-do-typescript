@@ -21,14 +21,15 @@ const Modal: React.FC<IModalProps> = ({ closeModal, taskId }) => {
 
   return (
     <div className="modal">
-	<h3>Edit your task:</h3>
-      <input
+	<h3 className='modal__title'>Edit your task:</h3>
+      <input 
+        className='modal__input'
         type="text"
         value={editText}
         onChange={(e) => setEditText(e.target.value)}
       />
-      <button onClick={editTask}>Save</button>
-      <button onClick={closeModal}>Close</button>
+      <button className='button' onClick={editTask}><span className='button__body'>Save</span></button>
+      <button className='button' onClick={closeModal}><span className='button__body'>Close</span></button>
     </div>
   );
 };
