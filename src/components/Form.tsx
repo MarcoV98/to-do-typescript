@@ -24,13 +24,14 @@ const Form: React.FC = () => {
   };
 
   return (
-    <form onSubmit={submitHandler} className="input-group">
+    <form onSubmit={submitHandler} className="input-group" >
       <input
         className="input-group__input"
         type="text"
         id="taskInput"
         placeholder="Add your task..."
         ref={inputText}
+        aria-label="Add the task you want to save here. It will be show below."
       />
       <button className="input-group__button" type="submit"><span className="button__body">Add</span></button>
     </form>

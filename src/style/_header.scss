@@ -1,0 +1,18 @@
+@import 'navbar';
+
+.header {
+    background-color: $navbarBgColor;
+    color: $navbarTextColor;
+
+    width: 100%;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+
+    &__text {
+    font-size: 2rem;
+    color: $logoTextColor;
+    font-style: italic;
+    }
+}

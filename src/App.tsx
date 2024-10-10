@@ -1,18 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './style/App.scss';
 
-import Form from './components/Form';
-import List from './components/List';
+import Navbar from './components/Navbar';
+import Homepage from './pages/homepage.page';
+import AccessiblePage from './pages/accessiblePage.page';
+import CreditsPage from './pages/creditsPage.page';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
 	return (
-		<div className="App">
-			<section className="main">
-			<h1 className="main__title">Welcome to your To Do List!</h1>
-				<Form />
-				<List />
-			</section>
-		</div>
+		<Router>
+			<div className="App">
+				<header className="header">
+					<p className="header__text">Task-Helper</p>
+					<Navbar />
+				</header>
+				<Routes>
+					<Route path="/" element={<Homepage />} />
+					<Route path="/accessible" element={<AccessiblePage />} />
+					<Route path="/credits" element={<CreditsPage />} />
+				</Routes>
+				<Footer />
+			</div>
+		</Router>
 	);
 };
 

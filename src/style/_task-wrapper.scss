@@ -1,0 +1,22 @@
+@import 'form';
+@import 'buttons';
+@import 'modal';
+@import 'list';
+
+.task-wrapper {
+	background-color: $mainBgColor;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: $deepShadow;
+	width: 40%;
+	@include displayCenter(column);
+    margin: 3rem auto;
+	&__title {
+		color: $secondaryColor;
+		font-family: $titleFont, sans-serif;
+		font-size: $titleSize;
+		font-weight: $titleWeight;
+		align-items: center;
+	}
+}
+
