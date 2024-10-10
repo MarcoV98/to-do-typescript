@@ -2,7 +2,9 @@
 @import 'mixins';
 @import 'fonts';
 
-@import 'main';
+@import 'header';
+@import 'task-wrapper';
+@import 'footer';
 
 
 * {
@@ -11,20 +13,25 @@
   padding: 0;
 }
 
-body, #root, .App {
-  height: 100vh;
-}
-
 body {
+  display: grid;
+  grid-template-columns: 1fr;
   background: $backgroundColor;
   color: $primaryColor;
 
   font-family: $mainFont, sans-serif;
   font-size: $mainSize;
   font-weight: $mainWeight;
+  position: relative;
+  min-height: 100vh;
 }
 
-.App {
-  @include displayCenter();
+#root {
+  margin-bottom: 2.5rem;
 }
+
+header, main, footer {
+  grid-column: 1 / -1;
+}
+
 
