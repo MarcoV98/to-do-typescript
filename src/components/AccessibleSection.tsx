@@ -3,7 +3,6 @@ import image1 from '../assets/image1.jpg'
 
 const AccessibleSection: React.FC = () => {
  return (
-    <>
     <article>
         <h2>Accessible text</h2>
     <figure>
@@ -43,7 +42,6 @@ const AccessibleSection: React.FC = () => {
     </ul>
 
     </article>
-    </>
  )
 }
 

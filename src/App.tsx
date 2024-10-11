@@ -12,10 +12,7 @@ const App: React.FC = () => {
 	return (
 		<Router>
 			<div className="App">
-				<header className="header">
-					<p className="header__text">Task-Helper</p>
-					<Navbar />
-				</header>
+				<Navbar />
 				<Routes>
 					<Route path="/" element={<Homepage />} />
 					<Route path="/accessible" element={<AccessiblePage />} />
