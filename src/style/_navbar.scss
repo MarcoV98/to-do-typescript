@@ -16,3 +16,11 @@
 
 	}
 }
+
+.main-nav {
+	&__list {
+		display: flex;
+		gap: 50px;
+		list-style: none;
+	}
+}
