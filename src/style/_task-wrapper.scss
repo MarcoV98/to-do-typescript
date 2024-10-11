@@ -3,7 +3,7 @@
 @import 'modal';
 @import 'list';
 
-.task-wrapper {
+.task-wrapper, .error-page, .credits {
 	background-color: $mainBgColor;
 	padding: 2rem;
 	border-radius: 10px;
