@@ -1,7 +1,18 @@
 .main-nav {
 	&__list {
+		text-decoration: none;
 		display: flex;
 		gap: 50px;
 		list-style: none;
+	}
+
+	&__item a {
+		text-decoration: none;
+
+		&.active, &:hover {
+			text-decoration: underline;
+		}
+
+
 	}
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
 	return (
@@ -8,13 +8,13 @@ const Navbar: React.FC = () => {
 			<nav className="main-nav">
 				<ul className="main-nav__list">
 					<li className="main-nav__item">
-						<Link to="/">Your Task</Link>
+						<NavLink to="/" className={({isActive}) => (isActive ? 'active' : undefined)} end>Your Task</NavLink>
 					</li>
 					<li className="main-nav__item">
-						<Link to="/accessible">Accessible Text</Link>
+						<NavLink to="/accessible" className={({isActive}) => (isActive ? 'active' : undefined)}>Accessible Text</NavLink>
 					</li>
 					<li className="main-nav__item">
-						<Link to="/credits">Credits</Link>
+						<NavLink to="/credits" className={({isActive}) => (isActive ? 'active' : undefined)}>Credits</NavLink>
 					</li>
 				</ul>
 			</nav>
