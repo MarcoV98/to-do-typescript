@@ -1,20 +1,18 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import tasks from './locales/tasks.json';
-import accessible from './locales/accessible.json';
+import en from './locales/en.json';
+import it from './locales/it.json';
 
 const resources = {
 	en: {
 		translation: {
-            ...tasks.en.translation,
-            ...accessible.en.translation
+            ...en.en.translation
  		},
 	},
 
 	it: {
 		translation: {
-          ...tasks.it.translation,
-          ...accessible.it.translation
+            ...it.it.translation
 		},
 	},
 };
