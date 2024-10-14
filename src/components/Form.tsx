@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { taskStore } from "../store/TaskStore";
+import { useTranslation } from "react-i18next";
 
 const Form: React.FC = () => {
   const inputText = useRef<HTMLInputElement>(null);
@@ -23,17 +24,19 @@ const Form: React.FC = () => {
     }
   };
 
+  const {t} = useTranslation();
+
   return (
     <form onSubmit={submitHandler} className="input-group" >
       <input
         className="input-group__input"
         type="text"
         id="taskInput"
-        placeholder="Add your task..."
+        placeholder= {t('formInputPlaceholder')}
         ref={inputText}
-        aria-label="Add the task you want to save here. It will be show below."
+        aria-label= {t('formInputAria')}
       />
-      <button className="input-group__button" type="submit"><span className="button__body">Add</span></button>
+      <button className="input-group__button" type="submit"><span className="button__body">{t('formBtnAdd')}</span></button>
     </form>
   );
 };

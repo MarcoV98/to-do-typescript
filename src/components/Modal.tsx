@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { taskStore } from '../store/TaskStore';
+import { useTranslation } from 'react-i18next';
 
 interface IModalProps {
 	closeModal: () => void;
@@ -11,7 +12,7 @@ const Modal: React.FC<IModalProps> = ({ closeModal, taskId }) => {
 	const [editText, setEditText] = useState(taskToEdit ? taskToEdit.text : '');
 
 	if (!taskToEdit) {
-		return <p>no task found</p>;
+		return <></>;
 	}
 
 	const editTask = () => {
@@ -19,22 +20,24 @@ const Modal: React.FC<IModalProps> = ({ closeModal, taskId }) => {
 		closeModal();
 	};
 
+	const {t} = useTranslation();
+
 	return (
 		<div className="modal">
-			<h3 className="modal__title">Edit your task:</h3>
+			<h3 className="modal__title">{t('modalTitle')}</h3>
 			<input
 				className="modal__input"
 				type="text"
 				value={editText}
 				onChange={(e) => setEditText(e.target.value)}
-				aria-label={`You are editing the task with this text: ${editText}`}
+				aria-label={`${t('modalInputAria')} ${editText}`}
 				aria-required="true"
 			/>
 			<button className="button" onClick={editTask}>
-				<span className="button__body">Save</span>
+				<span className="button__body">{t('modalBtnSave')}</span>
 			</button>
 			<button className="button" onClick={closeModal}>
-				<span className="button__body">Close</span>
+				<span className="button__body">{t('modalBtnClose')}</span>
 			</button>
 		</div>
 	);

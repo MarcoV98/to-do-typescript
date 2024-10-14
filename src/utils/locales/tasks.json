@@ -1,0 +1,57 @@
+{
+    "en": {
+        "translation": {
+            "welcomeMessage": "Welcome to Task-Helper",
+            "taskCount": "You saved {{count}} task so far.",
+            "taskCount_other": "You saved {{count}} tasks so far.",
+            "formInputPlaceholder": "Add your task...",
+            "formBtnAdd": "Add",
+            "formInputAria": "Add the task you want to save here. It will be show below.",
+
+            "listBtnEdit": "Edit",
+            "listBtnDelete": "Delete",
+
+            "modalTitle": "Edit your task:",
+            "modalBtnSave": "Save",
+            "modalBtnClose": "Close",
+            "modalInputAria": "You are editing the task with this text:",
+
+            "navLinkTasks": "Your Tasks",
+            "navLinkAccessible": "Accessible Text",
+            "navLinkCredits": "Credits",
+
+            "credits": "Created by Marco Vitale - 2024",
+
+            "errorOccurred": "An error occurred...",
+            "errorSorry": "Sorry, the page you requested doesn't exist"
+        }
+    },
+    
+    "it": {
+        "translation": {
+            "welcomeMessage": "Benvenuto su Task-Helper!",
+            "taskCount": "Hai aggiunto {{count}} compito finora.",
+            "taskCount_other": "Hai aggiunto {{count}} compiti finora.",
+            "formInputPlaceholder": "Aggiungi il tuo task...",
+            "formBtnAdd": "Aggiungi",
+            "formInputAria": "Aggiungi il compito che vuoi salvare qui. Sarà mostrato sotto.",
+
+            "listBtnEdit": "Modifica",
+            "listBtnDelete": "Elimina",
+            "modalTitle": "Modifica il tuo task",
+
+            "modalBtnSave": "Salva",
+            "modalBtnClose": "Chiudi",
+            "modalInputAria": "Stai modificando il task con il testo:",
+
+            "navLinkTasks": "I tuoi Compiti",
+            "navLinkAccessible": "Testo Accessibile",
+            "navLinkCredits": "Crediti",
+
+            "credits": "Creato da Marco Vitale - 2024",
+
+            "errorOccurred": "Si è verificato un errore...",
+            "errorSorry": "Mi dispiace, la pagina che hai cercato non esiste"
+        }
+    }
+}
