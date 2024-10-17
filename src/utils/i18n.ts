@@ -4,23 +4,24 @@ import en from './locales/en.json';
 import it from './locales/it.json';
 
 const resources = {
-	en: {
-		translation: {
-            ...en.en.translation
- 		},
-	},
-
-	it: {
-		translation: {
-            ...it.it.translation
-		},
-	},
-};
+	en: en,
+	it: it,
+}
 
 i18n.use(initReactI18next).init({
 	resources,
-    fallbackLng: 'en',
+	ns: [
+		'common',
+		'homepage',
+		'accessible',
+		'navbar',
+		'credits',
+		'error',
+	],
+	defaultNS: 'common',
+	fallbackLng: 'en',
 	lng: 'en',
+	debug: true,
 	interpolation: {
 		escapeValue: false,
 	},

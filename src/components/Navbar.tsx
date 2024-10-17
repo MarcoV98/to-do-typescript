@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Navbar: React.FC = () => {
-	const { t, i18n } = useTranslation();
+	const { t, i18n } = useTranslation('navbar');
 
 	const handleLanguage = (lng: string) => {
 		i18n.changeLanguage(lng);

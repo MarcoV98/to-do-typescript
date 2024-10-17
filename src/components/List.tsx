@@ -20,7 +20,7 @@ const List: React.FC = () => {
     taskStore.tasks = taskStore.tasks.filter((task) => task.id !== id);
   };
 
-  const {t} = useTranslation();
+  const {t} = useTranslation(['common','homepage']);
 
   return (
     <ul className="list">

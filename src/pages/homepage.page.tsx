@@ -1,22 +1,14 @@
-import React from "react"
-import Form from "../components/Form";
-import List from "../components/List";
-import { useTranslation } from "react-i18next";
-import { useSnapshot } from "valtio";
-import { taskStore } from "../store/TaskStore";
+import React from 'react';
+import Form from '../components/Form';
+import List from '../components/List';
 
-
-const Homepage = () =>{
-    const {t} = useTranslation();
-    const tasksSnapshot = useSnapshot(taskStore);
-    const count = tasksSnapshot.tasks.length;
-
-    return <section className='task-wrapper' >
-    <h1 className="task-wrapper__title">{t('welcomeMessage')}</h1>
-    <p>{t('taskCount',  {count: count})}</p>
-    <Form />
-    <List />
-</section>
-}
+const Homepage = () => {
+	return (
+		<section className='task-wrapper' >
+			<Form />
+			<List />
+		</section>
+	);
+};
 
 export default Homepage;

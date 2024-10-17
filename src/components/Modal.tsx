@@ -20,7 +20,7 @@ const Modal: React.FC<IModalProps> = ({ closeModal, taskId }) => {
 		closeModal();
 	};
 
-	const {t} = useTranslation();
+	const {t} = useTranslation(['homepage']);
 
 	return (
 		<div className="modal">

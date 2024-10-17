@@ -4,7 +4,7 @@ import Footer from './Footer';
 import { useTranslation } from 'react-i18next';
 
 const Error: React.FC = () => {
-	const {t} = useTranslation();
+	const {t} = useTranslation('error');
 
 	return (
 		<>

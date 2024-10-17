@@ -1,37 +1,46 @@
 {
-    "it": {
-        "translation": {
-            "welcomeMessage": "Benvenuto su Task-Helper!",
-            "taskCount": "Hai aggiunto {{count}} compito finora.",
-            "taskCount_other": "Hai aggiunto {{count}} compiti finora.",
-            "formInputPlaceholder": "Aggiungi il tuo task...",
-            "formBtnAdd": "Aggiungi",
-            "formInputAria": "Aggiungi il compito che vuoi salvare qui. Sarà mostrato sotto.",
-            "listBtnEdit": "Modifica",
-            "listBtnDelete": "Elimina",
-            "modalTitle": "Modifica il tuo task",
-            "modalBtnSave": "Salva",
-            "modalBtnClose": "Chiudi",
-            "modalInputAria": "Stai modificando il task con il testo:",
-            "navLinkTasks": "I tuoi Compiti",
-            "navLinkAccessible": "Testo Accessibile",
-            "navLinkCredits": "Crediti",
-            "credits": "Creato da Marco Vitale - 2024",
-            "errorOccurred": "Si è verificato un errore...",
-            "errorSorry": "Mi dispiace, la pagina che hai cercato non esiste",
+	"common": {
+		"listBtnEdit": "Modifica",
+		"listBtnDelete": "Elimina",
+		"modalBtnSave": "Salva",
+		"modalBtnClose": "Chiudi",
+    "formBtnAdd": "Aggiungi",
+    "creditsText": "Creato da Marco Vitale - 2024"
+	},
 
-            "accessibleText": "Testo Accessibile",
-            "greenHillCaption": "Una collina verde",
-            "contactEmail": "marco.vitales1998@gmail.com",
-            "address": "Via Roma 30, Milano, Italia",
-            "googleLink": "Google - Si apre in una nuova finestra",
-            "myStudies": "I miei studi:",
-            "bachelorDegree": "Laurea Triennale in Comunicazione e Media Contemporanei per le Industrie creative, presso Università di Parma, con votazione 108.",
-            "internship": "Settembre 2018 a Marzo 2019: Referente Facebook per la campagna contro odio online Fake News Real People",
-            "bachelorThesis": "Tesi di Laurea con la storica arte Cristina Caseero col titolo Orsi e Butti: origine arte sociale.",
-            "masterDegree": "Laurea Magistrale in Visual Cultures e Pratiche Curatoriali, presso Accademia di Belle Arti di Brera, con votazione 110 e lode.",
-            "internshipSaronno": "Luglio a dicembre 2022: Tirocinio presso il Comune di Saronno, con organizzazione di una mostra di Ale Guzzetti.",
-            "masterThesis": "Tesi di Laurea con il direttore del Museo del Novecento di Milano, Gianfranco Maraniello, col titolo Il ruolo degli spazi non espositivi nel museo."
-        }
-    }
+	"homepage": {
+		"welcomeMessage": "Benvenuto su Task-Helper!",
+		"taskCount": "Hai aggiunto {{count}} compito finora.",
+		"taskCount_other": "Hai aggiunto {{count}} compiti finora.",
+		"formInputPlaceholder": "Aggiungi il tuo task...",
+		"formInputAria": "Aggiungi il compito che vuoi salvare qui. Sarà mostrato sotto.",
+		"modalTitle": "Modifica il tuo task",
+		"modalInputAria": "Stai modificando il task con il testo:"
+	},
+
+	"accessible": {
+		"accessibleText": "Testo Accessibile",
+		"greenHillCaption": "Una collina verde",
+		"contactEmail": "marco.vitales1998@gmail.com",
+		"address": "Via Roma 30, Milano, Italia",
+		"googleLink": "Google - Si apre in una nuova finestra",
+		"myStudies": "I miei studi:",
+		"bachelorDegree": "Laurea Triennale in Comunicazione e Media Contemporanei per le Industrie creative, presso Università di Parma, con votazione 108.",
+		"internship": "Settembre 2018 a Marzo 2019: Referente Facebook per la campagna contro odio online Fake News Real People",
+		"bachelorThesis": "Tesi di Laurea con la storica arte Cristina Caseero col titolo Orsi e Butti: origine arte sociale.",
+		"masterDegree": "Laurea Magistrale in Visual Cultures e Pratiche Curatoriali, presso Accademia di Belle Arti di Brera, con votazione 110 e lode.",
+		"internshipSaronno": "Luglio a dicembre 2022: Tirocinio presso il Comune di Saronno, con organizzazione di una mostra di Ale Guzzetti.",
+		"masterThesis": "Tesi di Laurea con il direttore del Museo del Novecento di Milano, Gianfranco Maraniello, col titolo Il ruolo degli spazi non espositivi nel museo."
+	},
+
+	"navbar": {
+    "navLinkTasks": "I tuoi Compiti",
+		"navLinkAccessible": "Testo Accessibile",
+		"navLinkCredits": "Crediti"
+	},
+
+	"error": {
+		"errorOccurred": "Si è verificato un errore...",
+		"errorSorry": "Mi dispiace, la pagina che hai cercato non esiste"
+	}
 }

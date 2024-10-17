@@ -3,7 +3,7 @@ import image1 from '../assets/image1.jpg';
 import { useTranslation } from 'react-i18next';
 
 const AccessibleSection: React.FC = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('accessible');
 
     return (
         <article>

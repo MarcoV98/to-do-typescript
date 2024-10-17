@@ -7,7 +7,7 @@ const Credits = () => {
     return (
         <div className="credits">
         <h2>Task-Helper</h2>
-        <p>{t('credits')}</p>
+        <p>{t('creditsText')}</p>
         </div>
     )
 }

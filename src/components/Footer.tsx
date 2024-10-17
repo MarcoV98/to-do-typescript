@@ -6,7 +6,7 @@ function Footer () {
 
     return (
         <footer className="footer">
-        <p className="footer__text">{t('footerCredits')}</p>
+        <p className="footer__text">{t('creditsText')}</p>
     </footer>
     )
 }
