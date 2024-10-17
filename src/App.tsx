@@ -7,6 +7,7 @@ import ErrorPage from './pages/errorPage.page';
 import Homepage from './pages/homepage.page';
 import AccessiblePage from './pages/accessiblePage.page';
 import CreditsPage from './pages/creditsPage.page';
+import PokedexPage from './pages/pokedexPage.page';
 
 const router = createBrowserRouter([
 	{
@@ -17,8 +18,9 @@ const router = createBrowserRouter([
 			{ path: '/', element: <Homepage /> },
 			{ path: '/accessible', element: <AccessiblePage /> },
 			{ path: '/credits', element: <CreditsPage /> },
+			{ path: '/pokedex', element: <PokedexPage /> },
 		],
-	}
+	},
 ]);
 
 const App: React.FC = () => {

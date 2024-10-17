@@ -16,6 +16,10 @@ const Navbar: React.FC = () => {
 					<li className="main-nav__item">
 						<NavLink to="/credits" className={({isActive}) => (isActive ? 'active' : undefined)}>Credits</NavLink>
 					</li>
+					<li className="main-nav__item">
+						<NavLink to="/pokedex" className={({isActive}) => (isActive ? 'active' : undefined)}>Pokedex</NavLink>
+					</li>
+
 				</ul>
 			</nav>
 		</header>
