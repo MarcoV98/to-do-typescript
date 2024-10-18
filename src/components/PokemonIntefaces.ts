@@ -9,6 +9,7 @@ export interface IPokemon {
   export interface IUpdateData {
     pokemonList: IPokemon[];
     isLoading: boolean;
+    error?: string | null;
     nextUrl?: string;
     prevUrl?: string;
   }
