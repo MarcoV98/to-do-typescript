@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSnapshot } from 'valtio';
 import { taskStore } from '../store/TaskStore';
 import Modal from './Modal';
+import { useTranslation } from 'react-i18next';
 
 const List: React.FC = () => {
   const { tasks } = useSnapshot(taskStore);
@@ -19,6 +20,8 @@ const List: React.FC = () => {
     taskStore.tasks = taskStore.tasks.filter((task) => task.id !== id);
   };
 
+  const {t} = useTranslation();
+
   return (
     <ul className="list">
       {tasks.map((task) => (
@@ -27,10 +30,10 @@ const List: React.FC = () => {
             <span>{task.text}</span>
             <div>
               <button className="button" onClick={() => openModal(task.id)}>
-                <span className="button__body">Edit</span>
+                <span className="button__body">{t('listBtnEdit')}</span>
               </button>
               <button className="deleteBtn" onClick={() => deleteTask(task.id)}>
-                <span className="button__body">Delete</span>
+                <span className="button__body">{t('listBtnDelete')}</span>
               </button>
             </div>
           </li>
