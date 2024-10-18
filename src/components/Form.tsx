@@ -28,23 +28,23 @@ const Form: React.FC = () => {
 	const tasksSnapshot = useSnapshot(taskStore);
 	const count = tasksSnapshot.tasks.length;
 
-	const { t } = useTranslation(['common','homepage']);
+	const { t } = useTranslation(['homepage']);
 
 	return (
 		<>
-			<h1 className="task-wrapper__title">{t('welcomeMessage')}</h1>
-			<p>{t('taskCount', { count: count })}</p>
+			<h1 className="task-wrapper__title">{t('homepage:welcomeMessage')}</h1>
+			<p>{t('homepage:taskCount', { count: count })}</p>
 			<form onSubmit={submitHandler} className="input-group">
 				<input
 					className="input-group__input"
 					type="text"
 					id="taskInput"
-					placeholder={t('formInputPlaceholder')}
+					placeholder={t('homepage:formInputPlaceholder')}
 					ref={inputText}
-					aria-label={t('formInputAria')}
+					aria-label={t('homepage:formInputAria')}
 				/>
 				<button className="input-group__button" type="submit">
-					<span className="button__body">{t('formBtnAdd')}</span>
+					<span className="button__body">{t('common:formBtnAdd')}</span>
 				</button>
 			</form>
 		</>

@@ -24,20 +24,20 @@ const Modal: React.FC<IModalProps> = ({ closeModal, taskId }) => {
 
 	return (
 		<div className="modal">
-			<h3 className="modal__title">{t('modalTitle')}</h3>
+			<h3 className="modal__title">{t('homepage:modalTitle')}</h3>
 			<input
 				className="modal__input"
 				type="text"
 				value={editText}
 				onChange={(e) => setEditText(e.target.value)}
-				aria-label={`${t('modalInputAria')} ${editText}`}
+				aria-label={`${t('homepage:modalInputAria')} ${editText}`}
 				aria-required="true"
 			/>
 			<button className="button" onClick={editTask}>
-				<span className="button__body">{t('modalBtnSave')}</span>
+				<span className="button__body">{t('common:modalBtnSave')}</span>
 			</button>
 			<button className="button" onClick={closeModal}>
-				<span className="button__body">{t('modalBtnClose')}</span>
+				<span className="button__body">{t('common:modalBtnClose')}</span>
 			</button>
 		</div>
 	);

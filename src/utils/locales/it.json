@@ -4,8 +4,8 @@
 		"listBtnDelete": "Elimina",
 		"modalBtnSave": "Salva",
 		"modalBtnClose": "Chiudi",
-    "formBtnAdd": "Aggiungi",
-    "creditsText": "Creato da Marco Vitale - 2024"
+		"formBtnAdd": "Aggiungi",
+		"creditsText": "Creato da Marco Vitale - 2024"
 	},
 
 	"homepage": {
@@ -34,7 +34,7 @@
 	},
 
 	"navbar": {
-    "navLinkTasks": "I tuoi Compiti",
+		"navLinkTasks": "I tuoi Compiti",
 		"navLinkAccessible": "Testo Accessibile",
 		"navLinkCredits": "Crediti"
 	},
