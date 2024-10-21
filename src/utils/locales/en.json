@@ -1,0 +1,46 @@
+{
+	"common": {
+		"listBtnEdit": "Edit",
+		"listBtnDelete": "Delete",
+		"modalBtnSave": "Save",
+		"modalBtnClose": "Close",
+		"formBtnAdd": "Add",
+		"creditsText": "Created by Marco Vitale - 2024"
+	},
+
+	"homepage": {
+		"welcomeMessage": "Welcome to Task-Helper",
+		"taskCount": "You saved {{count}} task so far.",
+		"taskCount_other": "You saved {{count}} tasks so far.",
+		"formInputPlaceholder": "Add your task...",
+		"formInputAria": "Add the task you want to save here. It will be show below.",
+		"modalTitle": "Edit your task:",
+		"modalInputAria": "You are editing the task with this text:"
+	},
+
+	"accessible": {
+		"accessibleText": "Accessible Text",
+		"greenHillCaption": "A green hill",
+		"contactEmail": "marco.vitales1998@gmail.com",
+		"address": "Via Roma 30, Milan, Italy",
+		"googleLink": "Google - Opens in a new window",
+		"myStudies": "My studies:",
+		"bachelorDegree": "Bachelor's Degree in Communication and Contemporary Media for Creative Industries, at the University of Parma, grade 108.",
+		"internship": "September 2018 to March 2019: Facebook Referent for the campaign against online hate Fake News Real People",
+		"bachelorThesis": "Bachelor's thesis with art historian Cristina Caseero titled Bears and Butti: origins of social art.",
+		"masterDegree": "Master's Degree in Visual Cultures and Curatorial Practices, at the Academy of Fine Arts of Brera, with a grade of 110 cum laude.",
+		"internshipSaronno": "July to December 2022: Internship at the Municipality of Saronno, organizing an exhibition of Ale Guzzetti.",
+		"masterThesis": "Master's thesis with the director of the Museum of the Novecento in Milan, Gianfranco Maraniello, titled The role of non-exhibitory spaces in the museum."
+	},
+
+	"navbar": {
+		"navLinkAccessible": "Accessible Text",
+		"navLinkTasks": "Your Tasks",
+		"navLinkCredits": "Credits"
+	},
+
+	"error": {
+		"errorOccurred": "An error occurred...",
+		"errorSorry": "Sorry, the page you requested doesn't exist"
+	}
+}

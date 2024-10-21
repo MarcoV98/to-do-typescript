@@ -1,9 +1,17 @@
 .main-nav {
 	&__list {
+		background-color: $linkBgColor;
+		padding: 1rem;
+		border-radius: 10px;
 		text-decoration: none;
 		display: flex;
-		gap: 50px;
+		gap: 2rem;
 		list-style: none;
+		justify-content: space-between;
+	}
+
+	&__language-switcher {
+		@include displayCenter();
 	}
 
 	&__item a {
@@ -12,15 +20,5 @@
 		&.active, &:hover {
 			text-decoration: underline;
 		}
-
-
-	}
-}
-
-.main-nav {
-	&__list {
-		display: flex;
-		gap: 50px;
-		list-style: none;
 	}
 }

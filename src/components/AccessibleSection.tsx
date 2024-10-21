@@ -1,48 +1,46 @@
 import React from "react";
-import image1 from '../assets/image1.jpg'
+import image1 from '../assets/image1.jpg';
+import { useTranslation } from 'react-i18next';
 
 const AccessibleSection: React.FC = () => {
- return (
-    <article>
-        <h2>Accessible text</h2>
-    <figure>
-       <img src={image1} alt="a green hill with rising sun"></img>
-        <figcaption>A green hill</figcaption>
-    </figure>
+    const { t } = useTranslation('accessible');
 
-    <address>
-        <p>marco.vitales1998@gmail.com,</p>
-        <p>Via Roma 30, Milano, Italia,</p>
-        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google - Si apre in una nuova finestra</a>
-    </address>
+    return (
+        <article>
+            <h2>{t('accessibleText')}</h2>
+            <figure>
+                <img src={image1} alt={t('greenHillCaption')}></img>
+                <figcaption>{t('greenHillCaption')}</figcaption>
+            </figure>
 
-    <h2>I miei studi:</h2>
-    <ul>
-        <li> Laurea Magistrale in Visual Cultures e Pratiche Curatoriali, presso Accademia di Belle Arti di Brera, con votazione 110 e lode.
+            <address>
+                <p>{t('contactEmail')}</p>
+                <p>{t('address')}</p>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                    {t('googleLink')}
+                </a>
+            </address>
+
+            <h2>{t('myStudies')}</h2>
             <ul>
                 <li>
-                     luglio a dicembre 2022:Tirocinio presso il Comune di Saronno, con organizzazione di una mostra di Ale Guzzetti.
+                    {t('masterDegree')}
+                    <ul>
+                        <li>{t('internshipSaronno')}</li>
+                        <li>{t('masterThesis')}</li>
+                    </ul>
                 </li>
+
                 <li>
-                    Tesi di Laurea con il direttore del Museo del Novecento di Milano, Gianfranco Maraniello, col titolo Il ruolo degli spazi non espositivi nel museo
+                    {t('bachelorDegree')}
+                    <ul>
+                        <li>{t('internship')}</li>
+                        <li>{t('bachelorThesis')}</li>
+                    </ul>
                 </li>
             </ul>
-        </li>
-
-        <li> Laurea Triennale in Comunicazione e Media Contemporanei per le Industrie creative, presso Università di Parma, con votazione 108.
-            <ul>
-                <li>
-                    Settembre 2018 a Marzo 2019 Referente Facebook per la campagna contro odio online Fake News Real People
-                </li>
-                <li>
-                    Tesi di Laurea con la storica arte Cristina Caseero col titolo Orsi e Butti: origine arte sociale.
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-    </article>
- )
-}
+        </article>
+    );
+};
 
 export default AccessibleSection;
