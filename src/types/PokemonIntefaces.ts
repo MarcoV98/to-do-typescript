@@ -16,7 +16,6 @@ export interface IPokemon {
 
   export interface ICardProps {
     pokemon: IPokemon[];
-    isLoading: boolean;
   }
 
   export interface IPokedexFetchProps {

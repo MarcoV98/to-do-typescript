@@ -39,12 +39,14 @@ const Navbar: React.FC = () => {
 							{t('navLinkCredits')}
 						</NavLink>
 					</li>
+
+					<li className="main-nav__item">
+						<NavLink to="/pokedex" className={({isActive}) => (isActive ? 'active' : undefined)}>Pokedex</NavLink>
+					</li>
+					
 					<li className="main-nav__item language-switcher">
 						<button className='button' onClick={() => handleLanguage('en')}>Eng</button>
 						<button className='button' onClick={() => handleLanguage('it')}>Ita</button>
-					</li>
-					<li className="main-nav__item">
-						<NavLink to="/pokedex" className={({isActive}) => (isActive ? 'active' : undefined)}>Pokedex</NavLink>
 					</li>
 
 				</ul>

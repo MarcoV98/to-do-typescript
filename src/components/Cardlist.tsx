@@ -1,10 +1,7 @@
 import React from "react";
-import { ICardProps } from "./PokemonIntefaces";
+import { ICardProps } from "../types/PokemonIntefaces";
 
-const Cardlist: React.FC<ICardProps> = ({ pokemon, isLoading }) => {
-  if (isLoading) {
-    return <p>Your list is loading...</p>;
-  } else {
+const Cardlist: React.FC<ICardProps> = ({ pokemon}) => {
     return (
       <section className="cardlist">
         {pokemon.map((item) => (
@@ -16,8 +13,7 @@ const Cardlist: React.FC<ICardProps> = ({ pokemon, isLoading }) => {
         ))}
       </section>
     );
-  }
-};
+  };
 
 export default Cardlist;
 
