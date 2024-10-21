@@ -1,10 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Credits = () => {
+    const {t} = useTranslation();
+
     return (
         <div className="credits">
         <h2>Task-Helper</h2>
-        <p>By Marco Vitale - 2024</p>
+        <p>{t('creditsText')}</p>
         </div>
     )
 }
