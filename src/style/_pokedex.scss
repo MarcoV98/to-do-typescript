@@ -1,0 +1,34 @@
+.pokedex {
+	margin-bottom: 2rem;
+}
+
+.cardlist {
+  position: relative;
+}
+
+
+.errorPopup {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	background-color: black;
+	padding: 1rem;
+	z-index: 2;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+
+	&__text {
+		color: white;
+	}
+}
