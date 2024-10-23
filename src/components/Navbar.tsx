@@ -39,7 +39,20 @@ const Navbar: React.FC = () => {
 							{t('navLinkCredits')}
 						</NavLink>
 					</li>
+<<<<<<< Updated upstream
 					<li className="main-nav__item language-switcher">
+=======
+
+					<li className="main-nav__item">
+						<NavLink to="/pokedex" className={({isActive}) => (isActive ? 'active' : undefined)}>Pokedex</NavLink>
+					</li>
+
+					<li className="main-nav__item">
+						<NavLink to="/console" className={({isActive}) => (isActive ? 'active' : undefined)}>Console</NavLink>
+					</li>
+					
+					<li className="main-nav__item main-nav__language-switcher">
+>>>>>>> Stashed changes
 						<button className='button' onClick={() => handleLanguage('en')}>Eng</button>
 						<button className='button' onClick={() => handleLanguage('it')}>Ita</button>
 					</li>
