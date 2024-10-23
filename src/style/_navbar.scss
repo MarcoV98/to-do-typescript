@@ -5,7 +5,7 @@
 		border-radius: 10px;
 		text-decoration: none;
 		display: flex;
-		gap: 2rem;
+		gap: 1rem;
 		list-style: none;
 		justify-content: space-between;
 	}
@@ -17,8 +17,19 @@
 	&__item a {
 		text-decoration: none;
 
-		&.active, &:hover {
+		&:hover {
 			text-decoration: underline;
 		}
+
+		&.active {
+			background-color: $navbarBgColor;
+			padding: 0.4rem;
+			color: $linkBgColor;
+			border-radius: 10px;
+		}
+	}
+
+	&__language-switcher {
+		@include displayCenter()
 	}
 }
